@@ -1,8 +1,8 @@
-#  kali tools learn
-## 01 -  信息收集
-### 存活主机识别
-#### arping
-#### fping
+##  kali tools learn
+# 01 -  信息收集
+## 存活主机识别
+### arping
+### fping
 
 Fping类似于ping，但比ping强大。Fping与ping不同的地方在于，fping可以在命令行中指定要ping的主机数量范围，也可以指定含有要ping的主机列表文件。
 
