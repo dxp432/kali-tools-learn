@@ -1,4 +1,4 @@
-(kali工具目录)[#kali-tools.png]
+![kali工具目录](kali-tools.png)
 
 # 01 -  信息收集
 ## 1.1存活主机识别
