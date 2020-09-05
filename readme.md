@@ -55,3 +55,17 @@ hping3 -c 10000 -d 120 -S -w 64 -p 80 --flood --rand-source testphp.vulnweb.com
 ```
 Masscan 10.11.0.0/16 -p80
 ``
+
+### 1.1.5 thcping6
+
+主要用于ipv6
+
+## 1.2 路由分析
+
+### 1.2.1 netdiscover
+
+专用的二层发现工具。拥有主动和被动发现两种方式。
+
+```
+netdiscover -r 192.168.28.129/24
+```
