@@ -69,3 +69,27 @@ Masscan 10.11.0.0/16 -p80
 ```
 netdiscover -r 192.168.28.129/24
 ```
+
+# 06 - 无线攻击
+## 06.1蓝牙工具集
+### 6.1.1 spooftoop
+
+Spooftooph是一个了不起的工具，旨在自动欺骗或克隆蓝牙信息（名称，类和地址）。
+
+您可以看这个视频学
+```
+https://www.youtube.com/watch?v=JmQk4Yp9bww
+```
+1. 首先使用终端运行hciconfig指令看interface和开关情况：DOWN。
+```
+hciconfig
+```
+
+如果不懂可以使用man hciconfig查看说明。
+
+2. 终端开启。
+```
+hciconfig hci0 up
+```
+
+
