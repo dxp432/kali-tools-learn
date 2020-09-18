@@ -87,7 +87,7 @@ wpscan --url https://www.igyaan.in  --enumerate u
 ```
 wpscan --url https://www.igyaan.in --passwords '/usr/share/wordlists/rockyou.txt'  --username test
 ```
-你可以看这个视频学（不过这个是旧版本的wpscan，视频里的关键字要改掉，比如wordlist要改为passwords，username改为usernames） 
+你可以看这个视频学（不过这个是旧版本的wpscan视频，新版的wpscan使用方法有一点点不同，所以视频里的关键字要改掉，比如wordlist要改为passwords，username改为usernames） 
 
 [WPScan WordPress Vulnerability Scanner | Kali Linux Tutorial 2019](https://www.youtube.com/watch?v=eQVIg7zo_94&list=LLcrvfipWK74xk2aNBq4Aa7Q&index=2&t=688s)
 
