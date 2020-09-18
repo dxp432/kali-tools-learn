@@ -70,6 +70,24 @@ Masscan 10.11.0.0/16 -p80
 netdiscover -r 192.168.28.129/24
 ```
 
+# 3 - web程序
+## 3.1 CMS识别
+### WPScan
+
+WPScan是一个扫描 WordPress 漏洞的黑盒子扫描器。
+
+使用方法举例：
+1. 先查找用户，下面这个语句会把用户都找出来。
+
+```
+wpscan --url https://www.igyaan.in  --enumerate u
+```
+2. 在根据用户去用字典破解。
+
+```
+wpscan --url https://www.igyaan.in --passwords '/usr/share/wordlists/rockyou.txt'  --username test
+```
+
 # 06 - 无线攻击
 ## 06.1蓝牙工具集
 ### 6.1.1 spooftoop
